@@ -1,0 +1,41 @@
+.header {
+    background-color: #f6f6f6;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: top;
+  }
+  
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  
+.nav-list a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+.App-logo {
+    height: 10vmin;
+    pointer-events: none;
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+    }
+
+
+    @keyframes App-logo-spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+      
