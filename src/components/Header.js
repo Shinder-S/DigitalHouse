@@ -11,6 +11,7 @@ const Header = () => {
         <img src={logo} className="App-logo" alt="logo" />
           <li><Link to="/">Home</Link></li>
           <li><Link to="/register">Register</Link></li>
+          <li><Link to="/admin">AdminPanel</Link></li>
         </ul>
       </nav>
     </header>
