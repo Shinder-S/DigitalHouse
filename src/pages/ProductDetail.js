@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import '../style/ProductDetail.css'
 
 const ProductDetail = () => {
   const location = useLocation();
@@ -10,6 +11,8 @@ const ProductDetail = () => {
     navigate(-1); 
   };
 
+  const images = Array.isArray(product.images) ? product.images : [];
+
   return (
     <div className="product-detail-container">
       <header className="product-header">
@@ -19,9 +22,13 @@ const ProductDetail = () => {
       <div className="product-body">
         <p className="product-description">{product.description}</p>
         <div className="product-images">
-          {product.images.map((image, index) => (
-            <img key={index} src={image} alt={`Producto ${index + 1}`} className="product-image" />
-          ))}
+        {images.length > 0 ? (
+            images.map((image, index) => (
+              <img key={index} src={image} alt={`Product ${index + 1}`} className="product-image" />
+            ))
+          ) : (
+            <p>No images available for this product.</p>
+          )}
         </div>
       </div>
     </div>

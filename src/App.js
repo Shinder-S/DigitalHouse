@@ -6,6 +6,8 @@ import RegisterPage from './pages/RegisterPage';
 import AddProduct from './pages/AddProduct';
 import AdminPanel from './pages/AdminPanel';
 import ProductDetail from './pages/ProductDetail';
+import ProductGallery from './pages/ProductGallery';
+import ViewAllImages from './pages/ViewAllImages';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/admin/add-product" element={<AddProduct />} />
+          <Route path="/gallery" element={<ProductGallery />} />
+          <Route path="/view-all-images" element={<ViewAllImages />} />
         </Routes>
       </div>
     </Router>

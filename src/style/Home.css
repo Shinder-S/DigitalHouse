@@ -1,12 +1,12 @@
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  gap: 20px; /* Espacio entre productos */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
 }
 
 .product-card {
   padding: 20px;
-  background-color: #f8f8f8;
+  background-color: #6e95f2;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
@@ -14,6 +14,6 @@
 
 @media (max-width: 768px) {
   .products-grid {
-    grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    grid-template-columns: 1fr; 
   }
 }

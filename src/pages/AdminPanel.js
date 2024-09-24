@@ -3,16 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import '../style/AdminPanel.css';
 
 const AdminPanel = () => {
-    const navigate = useNavigate(); // Nuevo hook de react-router-dom v6
+    const navigate = useNavigate(); // New hook of react-router-dom v6
 
     const navigateToAddProduct = () => {
-      navigate('/admin/add-product'); // Redirigir a la página de agregar producto
+      navigate('/admin/add-product'); // Redirect to the add product page
     };
   
     return (
       <div className="admin-container">
-        <button onClick={navigateToAddProduct}>Agregar productos</button>
-        {/* Otros bloques (buscador, categorías, recomendaciones) */}
+        <button onClick={navigateToAddProduct}>Add products</button>
+        {/*  */}
       </div>
     );
   };

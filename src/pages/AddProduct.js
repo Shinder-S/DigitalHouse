@@ -16,7 +16,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Enviar datos al backend
+    // Send data to backend
     const formData = new FormData();
     formData.append('name', productName);
     formData.append('description', description);
@@ -31,12 +31,12 @@ const AddProduct = () => {
       });
 
       if (response.ok) {
-        // Manejar el éxito
-        alert('Producto agregado correctamente');
+        // Managing success
+        alert('Product added correctly');
       } else if (response.status === 409) {
-        setErrorMessage('El nombre del producto ya está en uso.');
+        setErrorMessage('The product name is already in use.');
       } else {
-        setErrorMessage('Error al agregar el producto.');
+        setErrorMessage('Error when adding the product.');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -45,11 +45,11 @@ const AddProduct = () => {
 
   return (
     <div className="add-product-container">
-      <h2>Agregar Producto</h2>
+      <h2>Add Product</h2>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Nombre del producto</label>
+          <label>Product name</label>
           <input
             type="text"
             value={productName}
@@ -59,7 +59,7 @@ const AddProduct = () => {
         </div>
 
         <div className="form-group">
-          <label>Descripción</label>
+          <label>Description</label>
           <textarea
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -68,7 +68,7 @@ const AddProduct = () => {
         </div>
 
         <div className="form-group">
-          <label>Imágenes del producto</label>
+          <label>Product images</label>
           <input
             type="file"
             multiple
@@ -76,7 +76,7 @@ const AddProduct = () => {
           />
         </div>
 
-        <button type="submit">Guardar Producto</button>
+        <button type="submit">Save Product</button>
       </form>
     </div>
   );
